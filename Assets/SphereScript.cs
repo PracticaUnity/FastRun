@@ -13,8 +13,7 @@ public class SphereScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-        transform.position += transform.forward * Time.deltaTime * 4;
+    void FixedUpdate () {
         if (Input.GetKeyDown(KeyCode.RightArrow)&&position<2){
             transform.position += transform.right;
             position++;

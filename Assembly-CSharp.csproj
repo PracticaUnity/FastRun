@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CubeScript.cs" />
+    <Compile Include="Assets\NewPlayableAsset.cs" />
     <Compile Include="Assets\Scenes\CameraMovementScript.cs" />
     <Compile Include="Assets\SphereScript.cs" />
     <Compile Include="Assets\TerrainScript.cs" />
