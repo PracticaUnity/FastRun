@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TerrainScript : MonoBehaviour {
 
-    public GameObject enemy;
     private int previous;
 	// Use this for initialization
 	void Start () {
@@ -14,18 +13,14 @@ public class TerrainScript : MonoBehaviour {
 	// Update is called once per frame
     void FixedUpdate () {
         transform.position -= transform.forward * Time.deltaTime * 4;
-        previous++;
-        if (previous == 100)
-        {
-            addEnemy();
+
+        if(this.transform.position.z <= -50){
+            Instantiate(this, new Vector3(transform.position.x, transform.position.y, 74.3f), Quaternion.identity);
+            Destroy(this.gameObject);
         }
 	}
 
-    void addEnemy(){
-        previous = 0;
-        float random = Random.Range(-2f, 2f);
-        int iRandom = (int) random;
-        Instantiate(enemy, new Vector3(this.transform.position.x+iRandom, this.transform.position.y+1, this.transform.position.z+10), Quaternion.identity);
-    }
+
+
 }
 
